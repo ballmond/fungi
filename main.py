@@ -35,7 +35,21 @@ def get():
 
 @app.route("/introduction")
 def get():
-  return
+  return (
+     Main(
+        H1("Introduction", align="center"),
+        P(Strong("Purpose"), ": Fungi Growing on Wood  is a web site devoted to the identification and appreciation of fungi growing in close association with living trees,  dead  trees, and woody debris. These important organisms are commonly called lignicolous fungi.", align="left"),
+        P(Strong("Area of Usefulness"), ": The  keys are useful for identifying fungi in Northeastern North America. As with all regional keys, coverage  decreases toward the periphery of the specified range. However, many of the species included in this site are more widely distributed than the indicated area.", align="left"),
+        P(Strong("Approach to Identification"), ": Identification of lignicolous fungi at  this site requires the use of dichotomous keys. Such keys require the user to observe and identify macroscopic characters of the unknown fungus in order to make choices between alternative possibilities. A glossary is provided to illustrate and define the characteristics used in the keys.", align="left"),
+        P(Strong("Restriction to lignicolous fungi"), ": The keys work only for parasitic and saprotrophic fungal species found on wood. This restricted focus simplifies the identification process because the many, many nonlignicolous species are excluded from the keys.", align="left"),
+        P(Strong("More Information"), ": The menu below provides links to more information about the website including guidelines for using dichotomous keys, information on the importance of lignicolous fung, and a glossary illustrating many of the macroscopic features of fungi used in the keys.", align="left"),
+        Table(Tbody(Tr(
+            Td(Div(
+                A("Home", href="/"), " | ", A("Shape Key", href="/shape-key"),
+                align="center")),
+            ),),width="100%", border="0",),
+        cls="container")
+  )
 
 @app.route("/shape-key")
 def get():
