@@ -6,10 +6,6 @@ def home():
    return Table(Tbody(Tr(
             Td(Div(
                 A("Home", href="/"), 
-                # " | ", 
-                # A("Shape Key", href="/shape-key"), 
-                # " | ", 
-                # A("Species List", href="/species-list"),
                 align="center")),
             ),),width="100%", border="0",),
 
@@ -70,7 +66,7 @@ def get():
         Table(Tbody(
            Tr(
             Td(Div(
-                A("Bird's nest", href=""),
+                A("Bird's nest", href="/"),
                 " | ", 
                 A("Club, coral, leafy", href="/"),
                 " | ", 
@@ -83,7 +79,7 @@ def get():
             ),
            Tr(
             Td(Div(
-                A("Jelly", href=""),
+                A("Jelly", href="/"),
                 " | ", 
                 A("Poroid", href="/"),
                 " | ", 
@@ -95,6 +91,18 @@ def get():
                 align="center")),
             ),
           ),width="100%", height="auto", border="0",),
+        Table(Tbody(
+           Tr(
+            Td(H3("Example")),
+            Td(H3("Shape Category")),
+            Td(H3("Description")),
+            ),
+           Tr(
+            Td(Img(src="https://res.cloudinary.com/dptfyzzyl/image/upload/v1731170082/fungi/birds_nest_shywg6.jpg", alt="birds nest")),
+            Td(Strong("Bird's Nest"), Br(), A("Key", href="/"), Br(), A("Species List", href="/")),
+            Td("These fungi look like miniature bird's nests with egg-shaped structures inside called peridioles. Bird's nest fungi are small, only 0.5 to 1 cm in diameter. Drops of water splash the peridioles out of the cups, dispersing the fungus."),
+            ),
+          ),width="100%", height="auto", border="5", bordercolor="00FF00"),
           home(),
         cls="container")
   )
