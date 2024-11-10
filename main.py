@@ -107,6 +107,7 @@ def get():
         Div(
           P("Species in this list may also be viewed in their ", A("taxonomic classification", ".", href="/")),
         ),
+        home(),
         cls="container")
   )
 
