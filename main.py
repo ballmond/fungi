@@ -101,6 +101,13 @@ def get():
 
 @app.route("/species-list")
 def get():
-  return
+  return (
+     Main(
+        H1("Alphabetical Species List", align="center"),
+        Div(
+          P("Species in this list may also be viewed in their ", A("taxonomic classification", ".", href="/")),
+        ),
+        cls="container")
+  )
 
 serve()
