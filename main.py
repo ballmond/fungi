@@ -60,6 +60,7 @@ def get():
 @app.route("/shape-key")
 def get():
   return (
+     Title("Wood decay fungi"), 
      Main(
         H1("Key to Shapes", align="center"),
         P("To begin keying, compare the specimen at hand to the illustrated and described shape categories  below. After determining the best fit, go to the dichotomous key for that category  to continue the identification process. Bear in mind that only one picture is used here to illustrate an entire group. Pay as much attention to the description as to the single image. Once you are more familiar with the shape categories, you can go directly to the keys via the menu below.", align="center"),
@@ -110,6 +111,7 @@ def get():
 @app.route("/species-list")
 def get():
   return (
+     Title("Wood decay fungi"), 
      Main(
         H1("Alphabetical Species List", align="center"),
         Div(
